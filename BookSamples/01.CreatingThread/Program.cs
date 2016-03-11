@@ -12,6 +12,7 @@ namespace _01.CreatingThread
         {
             Thread t = new Thread(new ThreadStart(MethodA));
             t.Start();
+            //MethodA();
             MethodB();
         }
 

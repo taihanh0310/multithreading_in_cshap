@@ -8,6 +8,33 @@ Thread cho phép chương trình thực hiện đồng thời nhiều tác vụ 
 > Thread là một <b> nhóm lệnh </b> được tạo ra để thực thi một tác vụ trong <b> process </b> chúng chia sẽ dữ liệu với nhau để xử lý.
 
 ## 2. Tạo và thực thi Thread
+> - Tạo phương thức (gọi là phương thức callback) sẽ thực thi ghi thread được gọi: Phương thức này phải không có tham số hoặc chỉ có một tham số là kiểu object và kiểu trả về là void.
+> - Tạo đối tượng Thread và truyền một delegate ThreadStart chứa phương thức sẽ thực thi vào contructor của Thread.
+> - Chạy Thread: gọi phương thức Start() của đối tượng tạo thread vừa tạo.
+
+<code>
+class Program
+{
+    static void Main()
+    {
+        Thread t = new Thread(new ThreadStart(MethodA));
+        t.Start();
+        MethodB();
+ 
+    }
+ 
+    static void MethodA()
+    {
+        for (int i = 0; i < 100; i++)
+            Console.Write("0");
+    }
+    static void MethodB()
+    {
+        for (int i = 0; i < 100; i++)
+            Console.Write("1");
+    }
+}
+</code>
 https://yinyangit.wordpress.com/2011/04/11/c-thread-basic/
 http://daringfireball.net/projects/markdown/syntax
 
