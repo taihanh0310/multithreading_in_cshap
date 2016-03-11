@@ -1,5 +1,9 @@
 # multithreading_in_cshap
 
+## Cơ bản về Thread
+> Thread hay còn gọi là tiểu trình là khái niệm trong lập trình. Thread cho phép chương trình thực hiện đồng thời nhiều tác vụ.
+
+
 ### Threading Basic
 <ul>
 	<li> Creating a thread in C# </li>
