@@ -1,0 +1,1 @@
+C:\Users\nthanh\Desktop\multithreading_in_cshap\BookSamples\BookSamples\obj\Debug\BookSamples.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\Users\nthanh\Desktop\multithreading_in_cshap\BookSamples\01.CreatingThread\bin\Debug\01.CreatingThread.exe
+C:\Users\nthanh\Desktop\multithreading_in_cshap\BookSamples\01.CreatingThread\bin\Debug\01.CreatingThread.pdb
+C:\Users\nthanh\Desktop\multithreading_in_cshap\BookSamples\01.CreatingThread\obj\Debug\01.CreatingThread.csprojResolveAssemblyReference.cache
+C:\Users\nthanh\Desktop\multithreading_in_cshap\BookSamples\01.CreatingThread\obj\Debug\01.CreatingThread.exe
+C:\Users\nthanh\Desktop\multithreading_in_cshap\BookSamples\01.CreatingThread\obj\Debug\01.CreatingThread.pdb

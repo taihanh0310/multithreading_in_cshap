@@ -9,6 +9,7 @@ Thread cho phép chương trình thực hiện đồng thời nhiều tác vụ 
 
 ## 2. Tạo và thực thi Thread
 https://yinyangit.wordpress.com/2011/04/11/c-thread-basic/
+http://daringfireball.net/projects/markdown/syntax
 
 
 ### Threading Basic
