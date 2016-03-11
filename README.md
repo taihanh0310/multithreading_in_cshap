@@ -12,29 +12,32 @@ Thread cho phép chương trình thực hiện đồng thời nhiều tác vụ 
 > - Tạo đối tượng Thread và truyền một delegate ThreadStart chứa phương thức sẽ thực thi vào contructor của Thread.
 > - Chạy Thread: gọi phương thức Start() của đối tượng tạo thread vừa tạo.
 
-<code>
-class Program
-{
-    static void Main()
-    {
-        Thread t = new Thread(new ThreadStart(MethodA));
-        t.Start();
-        MethodB();
- 
-    }
- 
-    static void MethodA()
-    {
-        for (int i = 0; i < 100; i++)
-            Console.Write("0");
-    }
-    static void MethodB()
-    {
-        for (int i = 0; i < 100; i++)
-            Console.Write("1");
-    }
-}
-</code>
+<p>Code mẫu:</p>
+<pre>
+	<code>
+		class Program
+		{
+			static void Main()
+			{
+				Thread t = new Thread(new ThreadStart(MethodA));
+				t.Start();
+				MethodB();
+		 
+			}
+		 
+			static void MethodA()
+			{
+				for (int i = 0; i < 100; i++)
+					Console.Write("0");
+			}
+			static void MethodB()
+			{
+				for (int i = 0; i < 100; i++)
+					Console.Write("1");
+			}
+		}
+	</code>
+</pre>
 https://yinyangit.wordpress.com/2011/04/11/c-thread-basic/
 http://daringfireball.net/projects/markdown/syntax
 
