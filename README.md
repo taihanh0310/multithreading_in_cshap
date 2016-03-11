@@ -7,6 +7,9 @@ Thread cho phép chương trình thực hiện đồng thời nhiều tác vụ 
 > Process có thể hiểu là <b>instance</b> của chương trình máy tính được thực thi, dựa trên hệ điều hành, hoàn toàn độc lập với các tiến trình khác.
 > Thread là một <b> nhóm lệnh </b> được tạo ra để thực thi một tác vụ trong <b> process </b> chúng chia sẽ dữ liệu với nhau để xử lý.
 
+## 2. Tạo và thực thi Thread
+https://yinyangit.wordpress.com/2011/04/11/c-thread-basic/
+
 
 ### Threading Basic
 <ul>
