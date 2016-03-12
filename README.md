@@ -8,9 +8,9 @@ Thread cho phép chương trình thực hiện đồng thời nhiều tác vụ 
 > Thread là một <b> nhóm lệnh </b> được tạo ra để thực thi một tác vụ trong <b> process </b> chúng chia sẽ dữ liệu với nhau để xử lý.
 
 ## 2. Tạo và thực thi Thread
-> * Tạo phương thức (gọi là phương thức callback) sẽ thực thi ghi thread được gọi: Phương thức này phải không có tham số hoặc chỉ có một tham số là kiểu object và kiểu trả về là void.
-> * Tạo đối tượng Thread và truyền một delegate ThreadStart chứa phương thức sẽ thực thi vào contructor của Thread.
-> * Chạy Thread: gọi phương thức Start() của đối tượng tạo thread vừa tạo.
+> Tạo phương thức (gọi là phương thức callback) sẽ thực thi ghi thread được gọi: Phương thức này phải không có tham số hoặc chỉ có một tham số là kiểu object và kiểu trả về là void.
+> Tạo đối tượng Thread và truyền một delegate ThreadStart chứa phương thức sẽ thực thi vào contructor của Thread.
+> Chạy Thread: gọi phương thức Start() của đối tượng tạo thread vừa tạo.
 
 <p>Code mẫu:</p>
 <pre>
@@ -40,15 +40,50 @@ Thread cho phép chương trình thực hiện đồng thời nhiều tác vụ 
 </pre>
 
 ## 3. Truyền tham số cho Thread
+> ParameteriedThreadStart là một giải pháp thay thế cho ThreadStart trong trường hợp lập trình viên muốn truyền tham số cho Thread. Đối tượng delegate ParameteriedThreadStart này chỉ chấp nhận một tham số kiểu object.
+Vì thế trong phương thức callback lập trình viên có thể cần phải ép kiểu để sử dụng kiểu dữ liệu của tham số 
+<p> Code mẫu</p>
+<pre>
+	<node>
+		namespace ThreadExample
+		{
+			class Student
+			{
+				public string Name { get; set; }
+				public DateTime BirthDay { get; set; }
+			}
+		 
+			class Program
+			{
+				static void Main()
+				{
+					Thread t1 = new Thread(Print);
+		 
+					t1.Start(new Student() { Name = "Yin", BirthDay = new DateTime(1989, 10, 17) });
+		 
+					Console.ReadKey();
+				}
+		 
+				static void Print(object obj)
+				{
+					Student st = (Student)obj;
+					Console.Write(st.Name + "\t" + st.BirthDay.ToShortDateString());
+				}
+			}
+		}
+	</node>
+</pre>
+<p> Kết quả </p>
 ## 4. Property ThreadState và ThreadPriority
 ### 4.1: ThreadState
+>
 ### 4.2: ThreadPriority
 ## 5. Các phương thức thông dụng của Thread
 ## 6. Foreground và Background Thread
 ## 7. Thread Pooling
 ## 8. Đồng bộ hóa và clocking
 ## 9. Deadlock
-> * Đồng bộ hóa khi sử dụng Thread là một công việc cần thiết, tuy nhiên nếu không cẩn thận trong cách sử dụng & thực thi code thì rất dễ xảy ra tình trạng chương trình dừng hoạt động vô thời gian.
+> Đồng bộ hóa khi sử dụng Thread là một công việc cần thiết, tuy nhiên nếu không cẩn thận trong cách sử dụng & thực thi code thì rất dễ xảy ra tình trạng chương trình dừng hoạt động vô thời gian.
 Cái này người ta đặt tên là Deadlock.
 
 > Deadlock xảy ra khi có ít nhất <b> hai Thread </b> cùng đợi Thread kia giải phóng, thật trùng hợp là cả hai lại đang giữ key của nhau.
